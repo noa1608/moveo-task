@@ -21,7 +21,7 @@ jobs:
 
     steps:
     - name: Check AWS Region
-      run: echo "AWS Region iss ${{ env.AWS_REGION }}"
+      run: echo "AWS Region is ${{ env.AWS_REGION }}"
       
     - name: Checkout repository
       uses: actions/checkout@v2
