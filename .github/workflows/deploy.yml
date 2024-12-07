@@ -43,6 +43,3 @@ jobs:
 
     - name: Apply Terraform
       run: terraform apply -auto-approve tfplan
-
-    - name: Output the NGINX instance public IP
-      run: echo "NGINX Instance Public IP: ${{ steps.deploy.outputs.nginx_public_ip }}"
