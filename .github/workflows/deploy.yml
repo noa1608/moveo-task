@@ -35,11 +35,6 @@ jobs:
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region: ${{ env.AWS_DEFAULT_REGION }}
 
-    - name: Import Existing Resources (If any)
-      run: |
-        terraform import aws_lb.nginx_lb arn:aws:elasticloadbalancing:us-east-1:084375543286:loadbalancer/app/nginx-lb/7d02a9d43b1dd958 || echo "nginx-lb already imported"
-        terraform import aws_lb_target_group.nginx_tg arn:aws:elasticloadbalancing:us-east-1:084375543286:targetgroup/nginx-tg/aec3eb13e98869c8 || echo "nginx-tg already imported"
-
     - name: Initialize Terraform
       run: terraform init
 
