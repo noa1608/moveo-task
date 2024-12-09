@@ -1,5 +1,5 @@
 variable "region" {
-  default = "eu-west-3"
+  default = "us-west-2"
 }
 
 variable "vpc_cidr" {
@@ -7,11 +7,11 @@ variable "vpc_cidr" {
 }
 
 variable "public_subnet_1_cidr" {
-  default = "10.0.1.0/24"  # CIDR for public subnet 1
+  default = "10.0.1.0/24"  
 }
 
 variable "public_subnet_2_cidr" {
-  default = "10.0.2.0/24"  # CIDR for public subnet 2
+  default = "10.0.2.0/24"  
 }
 
 variable "private_subnet_cidr" {
@@ -19,15 +19,15 @@ variable "private_subnet_cidr" {
 }
 
 variable "public_subnet_1_az" {
-  default = "eu-west-3a" 
+  default = "us-west-2a" 
 }
 
 variable "public_subnet_2_az" {
-  default = "eu-west-3b"
+  default = "us-west-2b"
 }
 
 variable "private_subnet_az" {
-  default = "eu-west-3a"
+  default = "us-west-2a"
 }
 
 variable "instance_type" {
@@ -38,10 +38,10 @@ variable "instance_type" {
 
 variable "ami_id" {
   description = "AMI ID for Ubuntu 22.04 LTS"
-  default     = "ami-09be70e689bddcef5" 
+  default     = "ami-05d38da78ce859165" 
 }
 
 variable "key_name" {
   description = "Key pair name for EC2 access"
-  default     = "paris"  
+  default     = "moveo"  
 }
